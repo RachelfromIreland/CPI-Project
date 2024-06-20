@@ -1,1 +1,1 @@
-web: node index.js
+web: gunicorn cpi_ltd.wsgi
