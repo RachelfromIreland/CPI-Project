@@ -9,15 +9,15 @@ from .forms import BookingForm
 def book_party(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
-    if form.is_valid():
-        booking = form.save(commit=False)
-#        booking.customer = request.user
-        if Booking.objects.filter(date=booking.date, time_slot=booking.time_slot).exists():
-            messages.error(request, 'This time slot is already booked.')
-        else:
-            booking.save()
-            messages.success(request, 'Party booked successfully!')
-            return redirect('booking:party_list')
+        if form.is_valid():
+            booking = form.save(commit=False)
+#           booking.customer = request.user
+            if Booking.objects.filter(date=booking.date, time_slot=booking.time_slot).exists():
+                messages.error(request, 'This time slot is already booked.')
+            else:
+                booking.save()
+                messages.success(request, 'Party booked successfully!')
+                return redirect('booking:party_list')
     else:
         form = BookingForm()
-    return render(request, 'booking/book_party.html', {'form': form})
+    return render(request, 'book/book_party.html', {'form': form})
