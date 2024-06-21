@@ -1,1 +1,1 @@
-web: gunicorn cpi_ltd.wsgi
+web: gunicorn cpi_ltd.wsgi:application
