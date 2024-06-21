@@ -12,7 +12,7 @@ TIME_SLOTS = [
 class Booking(models.Model):
 # create model for user later, test Booking first    customer = models.ForeignKey(User, on_delete=models.CASCADE)
     booking_name = models.CharField(max_length=100)
-    num_atending = models.PositiveIntegerField()
+    num_attending = models.PositiveIntegerField()
     date = models.DateField()
     time_slot = models.CharField(max_length=5, choices=TIME_SLOTS)
     booking_date = models.DateTimeField(auto_now_add=True)
