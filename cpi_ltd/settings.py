@@ -30,9 +30,13 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-rachelfromir-cpiproject-1izgndes49j.ws.codeinstitute-ide.net',
+    '8000-rachelfromir-cpiproject-a5mr6tgcrd2.ws.codeinstitute-ide.net',
     '.herokuapp.com'
     ]
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-rachelfromir-cpiproject-a5mr6tgcrd2.ws.codeinstitute-ide.net',  # Add your domain here
+]
 
 
 # Application definition
