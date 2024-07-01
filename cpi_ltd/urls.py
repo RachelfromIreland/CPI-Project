@@ -20,5 +20,6 @@ from book.views import book_party
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', home, name='home'),
     path('book/', book_party, name='book'),
 ]
