@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- index.html content starts here -->
+
+            <main class="container my-5">
+                <section id="about">
+                    <h2>About Us</h2>
+                    <p>This is the About Us section.</p>
+                </section>
+        
+                <section id="book" class="my-5">
+                    <h2>Book a Party</h2>
+                    <a href="{% url 'book' %}" class="btn btn-primary">Book Now</a>
+                </section>
+        
+                <section id="contact" class="my-5">
+                    <h2>Contact Us</h2>
+                    <p>This is the Contact Us section. Future contact form will be here.</p>
+                </section>
+            </main>
+
+<!-- index.html content ends here -->
+{% endblock %}
+
