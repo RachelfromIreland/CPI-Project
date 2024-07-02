@@ -1,0 +1,7 @@
+<h1>Edit Booking</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save changes</button>
+</form>
+<a href="{% url 'book:party_list' %}">Cancel</a>
