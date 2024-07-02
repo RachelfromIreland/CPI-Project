@@ -10,14 +10,32 @@ def book_party(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
         if form.is_valid():
-            booking = form.save(commit=False)
-#           booking.customer = request.user
-            if Booking.objects.filter(date=booking.date, time_slot=booking.time_slot).exists():
+            new_booking = form.save(commit=False)
+            new_booking.customer = request.user
+            if Booking.objects.filter(date=new_booking.date, time_slot=new_booking.time_slot).exists():
                 messages.error(request, 'This time slot is already booked.')
             else:
-                booking.save()
+                new_booking.save()
                 messages.success(request, 'Party booked successfully!')
-                return redirect('booking:party_list')
+                return redirect('book:party_list')
     else:
         form = BookingForm()
     return render(request, 'book/book_party.html', {'form': form})
+
+
+@login_required
+def party_list(request):
+    bookings = Booking.objects.filter(customer=request.user)
+    return render(request, 'book/party_list.html', {'bookings': bookings})
+
+@login_required
+def edit_booking(request, booking_id):
+    booking = get_object_or_404(Booking, id=booking_id, customer=request.user)
+    if request.method == 'POST':
+        form = BookingForm(request.POST, instance=booking)
+        if form.is_valid():
+            form.save()
+            return redirect('book:party_list')
+    else:
+        form = BookingForm(instance=booking)
+    return render(request, 'book/edit_booking.html', {'form': form, 'booking': booking})
