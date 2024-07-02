@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,9 +12,12 @@
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body class="d-flex flex-column h-100 main-bg">
-            <nav class="navbar navbar-expand-lg navbar-dark">
+            <nav class="navbar navbar-expand-lg navbar-dark dark-bg">
                 <div class="container-fluid">
                 <a class="navbar-brand" href="{% url 'home' %}">CPI Ltd</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,8 +45,23 @@
             </div>
             </nav>
 
-    <h1>Welcome to the CPI website!</h1>
-    <p>This is our site for bookings and queries</p>
+
+            <main class="container my-5">
+                <section id="about">
+                    <h2>About Us</h2>
+                    <p>This is the About Us section.</p>
+                </section>
+        
+                <section id="book" class="my-5">
+                    <h2>Book a Party</h2>
+                    <a href="{% url 'book' %}" class="btn btn-primary">Book Now</a>
+                </section>
+        
+                <section id="contact" class="my-5">
+                    <h2>Contact Us</h2>
+                    <p>This is the Contact Us section. Future contact form will be here.</p>
+                </section>
+            </main>
 
     <!-- Footer -->
     <footer class="footer mt-auto py-3 dark-bg">
