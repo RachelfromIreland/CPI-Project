@@ -8,10 +8,14 @@
             <h1 class="form-header text-center uppercase">Delete Booking</h1>
             <p>Are you sure you want to delete the booking for {{ booking.date }} at {{ booking.time_slot }}?</p>
 
-            <form method="post">
+            <form method="post" class="row justify-content-center">
                 {% csrf_token %}
-                <button type="submit" class="btn btn-danger">Delete</button>
-                <a href="{% url 'book:party_list' %}" class="btn btn-secondary">Cancel</a>
+                <div class="d-grid gap-2 col-4 mx-auto">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </div>
+                <div class="d-grid gap-2 col-4 mx-auto">
+                <a href="{% url 'book:party_list' %}" class="btn btn-secondary cancel-btn">Cancel</a>
+                </div>
             </form>
         </div>
     </div>
