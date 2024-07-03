@@ -6,7 +6,7 @@
 <!-- index.html content starts here -->
 
             <main class="container my-5">
-                <section class="container-fluid">
+                <section class="container-fluid" id="home">
                     <div class="row">
                         <div class="col-md-4 bg-color-location section-column">
                             <div class="row">
@@ -17,20 +17,18 @@
                                 </div>
                             </div>
                             <div class="location-name">
-                                <div class="key">
+                                <div>
                                     <h5 class="uppercase">CPI Ltd</h5>
                                 </div>
-                                <div class="value">
-                                    <p>Knockrawer</p>
-                                </div>
-                                <div class="value">
-                                    <p>Castlefinn</p>
-                                </div>
-                                <div class="value">
-                                    <p>Co. Donegal</p>
-                                </div>
-                                <div class="value">
-                                    <p>Eircode</p>
+                                <div>
+                                    <p>Knockrawer
+                                        <br>
+                                        Castlefinn
+                                        <br>
+                                        Co. Donegal
+                                        <br>   
+                                        Eircode
+                                    </p>
                                 </div>
                             </div>
                             <div class="location-section-item">
@@ -94,7 +92,7 @@
                                             <p>
                                                 If you're interested in booking the hall for a party you can fill out a short online form here:
                                             </p>
-                                            <a href="{% url 'book:book_party' %}" class="btn btn-primary">Book a Party</a>
+                                            <a href="{% url 'book:book_party' %}" class="btn btn-light">Book a Party</a>
                                         </div>
                                     </div>
                                 </div>
@@ -115,7 +113,7 @@
                                             <p>
                                                 If you'd like to book our sports hall, meeting room or computer suite, or have any other queries about the centre please contact us by filling the form below:
                                             </p>
-                                            <a href="" class="btn btn-primary">Contact Us</a>
+                                            <a href="" class="btn btn-light">Contact Us</a>
                                         </div>
                                     </div>
                                 </div>
