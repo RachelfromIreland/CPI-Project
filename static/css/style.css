@@ -1,11 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
 .navbar {
-    background-color: rgba(0, 106, 103, 0.6);
+    background-color: rgb(106, 162, 134);
 }
 
 /*  Colours  */
 
-.bg-color-what-we-do {
-    background-color: rgba(106, 162, 134, 0.4);
+body {
+    height: 100vh;
+    background-image: url(../images/CPIbg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#home {
+    padding: 25px;
+    background-color: rgba(38, 105, 72, 0.8);
+    color: whitesmoke;
 }
 
 /*  Paddings, margins and text styles  */
@@ -15,6 +27,12 @@ h2,
 h3,
 h4 {
     margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+}
+
+.section-heading {
+    margin-bottom: 15px;
 }
 
 .uppercase {
@@ -25,9 +43,35 @@ h4 {
 
 .what-do-icon {
     font-size: 26px;
-    color: #006e2a;
+    color: whitesmoke;
 }
 
 .what-do-heading {
     margin-bottom: 15px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(106, 162, 134);
+    min-height: 60px;
+    margin: 0;
+}
+
+.footer-links {
+    width: 32px;
+    height: 32px;
+    padding: 12px 0;
+    border-radius: 50%;
+    font-size: 13px;
+    line-height: 7px;
+    text-align: center;
+    color: #fafafa;
+    background: #8f8f8f;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
 }
