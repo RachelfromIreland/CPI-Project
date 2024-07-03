@@ -2,12 +2,18 @@
 {% load static %}
 
 {% block content %}
-<h1>Delete Booking</h1>
-<p>Are you sure you want to delete the booking for {{ booking.date }} at {{ booking.time_slot }}?</p>
+<section class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-md-6 display-form">
+            <h1 class="form-header text-center uppercase">Delete Booking</h1>
+            <p>Are you sure you want to delete the booking for {{ booking.date }} at {{ booking.time_slot }}?</p>
 
-<form method="post">
-    {% csrf_token %}
-    <button type="submit" class="btn btn-danger">Delete</button>
-    <a href="{% url 'book:party_list' %}" class="btn btn-secondary">Cancel</a>
-</form>
+            <form method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">Delete</button>
+                <a href="{% url 'book:party_list' %}" class="btn btn-secondary">Cancel</a>
+            </form>
+        </div>
+    </div>
+</section>
 {% endblock %}
