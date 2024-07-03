@@ -10,8 +10,8 @@
             {% for booking in bookings %}
                 <li>
                     {{ booking }} 
-                    <a href="{% url 'book:edit_booking' booking.id %}" class="btn-light">Edit</a>
-                    <a href="{% url 'book:delete_booking' booking.id %}" class="btn-danger">Delete</a>
+                    <a href="{% url 'book:edit_booking' booking.id %}" class="btn btn-light btn-sm">Edit</a>
+                    <a href="{% url 'book:delete_booking' booking.id %}" class="btn btn-danger btn-sm">Delete</a>
                 </li>
             {% endfor %}
         </ul>
