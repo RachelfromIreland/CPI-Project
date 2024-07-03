@@ -4,20 +4,27 @@
 {% block content %}
 <div class="row justify-content-center">
     <div class="col-md-6 display-form">
-    <h1 class="form-header text-center uppercase">Party List</h1>
-    {% if bookings %}
-        <ul>
-            {% for booking in bookings %}
-                <li>
-                    {{ booking }} 
-                    <a href="{% url 'book:edit_booking' booking.id %}" class="btn btn-light btn-sm">Edit</a>
-                    <a href="{% url 'book:delete_booking' booking.id %}" class="btn btn-danger btn-sm">Delete</a>
-                </li>
-            {% endfor %}
-        </ul>
-    {% else %}
-        <p>No bookings found.</p>
-    {% endif %}
+        <h1 class="form-header text-center uppercase">My Booked Parties</h1>
+        <h4 class="text-center">Welcome, {{ user.username }}.  Here are your bookings:</h4>
+        {% if bookings %}
+            <ul class="list-group">
+                {% for booking in bookings %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong>{{ booking.booking_name }}</strong><br>
+                            Date: {{ booking.date }}<br>
+                            Time: {{ booking.time_slot }}
+                        </div>
+                        <div>
+                            <a href="{% url 'book:edit_booking' booking.id %}" class="btn btn-light btn-sm">Edit</a>
+                            <a href="{% url 'book:delete_booking' booking.id %}" class="btn btn-danger btn-sm">Delete</a>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p class="text-center">No bookings found.</p>
+        {% endif %}
     </div>
 </div>
 {% endblock %}
