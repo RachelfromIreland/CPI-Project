@@ -6,19 +6,122 @@
 <!-- index.html content starts here -->
 
             <main class="container my-5">
-                <section id="about">
-                    <h2>About Us</h2>
-                    <p>This is the About Us section.</p>
-                </section>
-        
-                <section id="book" class="my-5">
-                    <h2>Book a Party</h2>
-                    <a href="{% url 'book:book_party' %}" class="btn btn-primary">Book Now</a>
-                </section>
-        
-                <section id="contact" class="my-5">
-                    <h2>Contact Us</h2>
-                    <p>This is the Contact Us section. Future contact form will be here.</p>
+                <section class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4 bg-color-location section-column">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h3 class="section-heading uppercase">
+                                        Where are we?
+                                    </h3>
+                                </div>
+                            </div>
+                            <div class="location-name">
+                                <div class="key">
+                                    <h5 class="uppercase">CPI Ltd</h5>
+                                </div>
+                                <div class="value">
+                                    <p>Knockrawer</p>
+                                </div>
+                                <div class="value">
+                                    <p>Castlefinn</p>
+                                </div>
+                                <div class="value">
+                                    <p>Co. Donegal</p>
+                                </div>
+                                <div class="value">
+                                    <p>Eircode</p>
+                                </div>
+                            </div>
+                            <div class="location-section-item">
+                                <div class="key">
+                                    <p class="uppercase">Phone:</p>
+                                </div>
+                                <div class="value">
+                                    <p>074 911 2345</p>
+                                </div>
+                            </div>
+                            <div class="location-section-item">
+                                <div class="key">
+                                    <p class="uppercase">Email:</p>
+                                </div>
+                                <div class="value">
+                                    <p>email@example.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8 bg-color-what-we-do section-column">
+                            <div class="row">
+                                <div class="col">
+                                    <h3 class="section-heading uppercase">What We Do</h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div
+                                    class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-6"
+                                >
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <i
+                                                class="what-do-icon fa fa-building-wheat"
+                                                aria-hidden="true"
+                                            ></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <h4 class="what-do-heading uppercase">
+                                                Our Facilities
+                                            </h4>
+                                            <p>
+                                                CPI Ltd is a community centre in Castlefinn, Donegal with a lot of various facilities available to members of the community.  Our sports hall can be rented by the hour for groups or booked for children's parties.  We have bouncing castles available.  We also have a computer suite and various meeting rooms that can also be hired by the hour.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-6"
+                                >
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <i
+                                                class="what-do-icon fa fa-cake-candles"
+                                                aria-hidden="true"
+                                            ></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <h4 class="what-do-heading uppercase">
+                                                Want to book a party?
+                                            </h4>
+                                            <p>
+                                                If you're interested in booking the hall for a party you can fill out a short online form here:
+                                            </p>
+                                            <a href="{% url 'book:book_party' %}" class="btn btn-primary">Book a Party</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="col-10 offset-1 offset-sm-0 col-sm-4 col-md-6"
+                                >
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <i
+                                                class="what-do-icon fa-regular fa-circle-question"
+                                                aria-hidden="true"
+                                            ></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <h4 class="what-do-heading uppercase">
+                                                Interested in one of our other facilities?
+                                            </h4>
+                                            <p>
+                                                If you'd like to book our sports hall, meeting room or computer suite, or have any other queries about the centre please contact us by filling the form below:
+                                            </p>
+                                            <a href="" class="btn btn-primary">Contact Us</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </main>
 

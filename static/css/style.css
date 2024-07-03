@@ -1,3 +1,33 @@
 .navbar {
     background-color: rgba(0, 106, 103, 0.6);
 }
+
+/*  Colours  */
+
+.bg-color-what-we-do {
+    background-color: rgba(106, 162, 134, 0.4);
+}
+
+/*  Paddings, margins and text styles  */
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+/*  What we do section  */
+
+.what-do-icon {
+    font-size: 26px;
+    color: #006e2a;
+}
+
+.what-do-heading {
+    margin-bottom: 15px;
+}
