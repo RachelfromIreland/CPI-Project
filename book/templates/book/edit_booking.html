@@ -9,9 +9,13 @@
             <form method="post">
                 {% csrf_token %}
                 {{ form.as_p }}
-            <button type="submit" class="btn-light">Save changes</button>
+                <div class="d-grid gap-2 col-4 mx-auto">
+                    <button type="submit" class="btn btn-light">Save changes</button>
+                </div>
             </form>
-            <a href="{% url 'book:party_list' %}" class="btn-danger">Cancel</a>
+            <div class="d-grid gap-2 col-4 mx-auto">
+                <a href="{% url 'book:party_list' %}" class="btn btn-danger cancel-btn">Cancel</a>
+            </div>
         </div>
     </div>
 </section>
