@@ -6,6 +6,7 @@ from .models import Booking
 from .forms import BookingForm
 
 # Create your views here.
+@login_required
 def book_party(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
