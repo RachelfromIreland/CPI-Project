@@ -105,6 +105,17 @@ footer {
     margin-top: 5px;
 }
 
+/*  Contact form  */
+.form-input {
+    display: flex;
+    align-items: center;
+}
+.form-label {
+    padding-right: 5px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+}
+
 /*  Login page  */
 .link-color {
     background-color: whitesmoke;
