@@ -2,8 +2,6 @@
 
 **CPI Ltd** is a local community centre.  People can book children's birthday parties in the sports hall and a variety of other facilities. 
 
-![Program Startup Screenshot](/documents/program_screenshot.JPG)
-
 The user has the option to book parties as well as send a contact form with any other queries. 
 
 The site can be accessed by this [link](https://cpi-ltd-project-38c4fa95377b.herokuapp.com/).
