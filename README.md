@@ -134,16 +134,12 @@ The footer contains social media links that open in a new tab.
 ## Features
 
 ### Existing Features
-- Welcome Message with a prompt asking a user if they have visited before.    
-    - Inputting 'yes' will prompt the user to enter their username and password.
-    - Inputting 'no' will allow the user to create an account.
-        - Validation functions ensure inputs meet the prompted requirements.
-    - Any other response prompts a message stating a 'yes' or 'no' response is required.
-- After login, a user can search for books by title.  
-    - If the book is available the user will have the option to check it out.
-    - If a book is unavailable the user will be informed of the return date.
-    - If a title is not found the user will be prompted to try again and informed that titles are case sensitive.
-- After searching for a book and taking one of the first two steps above, the user is given the option to search again or exit the program.  Choosing to exit begins the program again.
+- Django admin is utilised to allow staff to log in as a superuser.    
+    - The superuser can view, edit and delete bookings for all users.
+- After login, a user can book, view, edit and delete parties.  
+    - If the party time slot is available the user will have the option to book it.
+    - If a time slot is unavailable the user will be informed and asked to choose a different slot.
+    - If a user wants to edit or delete bookings, they will have the option to cancel the changes.
 - The contact form is powered by ![Formspree](https://formspree.io/).
     - Forms are sent using this format:
 
@@ -208,9 +204,9 @@ Full Testing was performed on the following physical devices.
 #### Solved Bugs
 | Bug | Solution |
 | ---| ---|
-|  |  |
-|  |  |
-|  |  |
+| The contact us form was not resulting in an email to the staff inbox | After trying and failing to integrate email into django directly due to gmail security features, a third party site, [Formspree](https://formspree.io/), was used to send the contact form. This should also help future proof the site in the event of more security changes from email providers.  |
+| Urls for the project were not loading | The urls for the site were resulting in path not found errors. After troubleshooting, adding the app name to the top of each app's urls.py file solved the issue. |
+| The styles added with CSS were not loading | The STATIC_URL and STATIC_FILES_DIRS had not been added to settings.py correctly.  Fixing this error solved the issue. |
 
 #### Unsolved Bugs
 No unsolved bugs were detected after testing.
@@ -220,10 +216,12 @@ No unsolved bugs were detected after testing.
 
 
 ## Technologies Used
-- Code Institute's GitPod Enterprise IDE was used for the development of the program.
-- Git was used for the version control of the program.
-- GitHub was used to host the code of the program.
-- Heroku was used to deploy the program.
+- Code Institute's GitPod Enterprise IDE was used for the development of the project.
+- Git was used for the version control of the project.
+- GitHub was used to host the code of the project.
+- Django was used to build the project.
+- Heroku was used to deploy the project.
+- Bootstrap was used along with CSS to style the project
 
 ## Deployment
 This project was deployed using Heroku.
@@ -235,6 +233,11 @@ The steps to deploy are as follows:
 - Click the deploy button. 
 
 The live link can be found [here](https://cpi-ltd-project-38c4fa95377b.herokuapp.com/).
+
+### Local Deployment
+To make a local copy of this project, you can clone it. In your IDE Terminal, type the following command to clone the repository:
+
+git clone https://github.com/RachelfromIreland/CPI-Project
 
 ## Future improvements
 - In the future, I would like to be able to implement more thorough user input validation.  As of now any date can be booked for a party, I would like to implement a 48 hour window which bookings should be made in advance of.
