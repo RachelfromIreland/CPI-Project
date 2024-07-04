@@ -247,7 +247,7 @@ git clone https://github.com/RachelfromIreland/CPI-Project
 
 ## Credit
 - CI Django Blog and My Resume - LINK HERE
-
+- The background image for the project was taken from [castlefinn.ie](https://castlefinn.ie/points-of-interest/cpi-centre/).
 
 ## Tools
 - [Lucid Chart](https://www.lucidchart.com/pages/examples/flowchart-maker) was used to create the flowchart.
