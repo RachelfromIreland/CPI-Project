@@ -2,35 +2,45 @@
 {% load static %}
 
 {% block content %}
-<div class="container-fluid display-form">
-    <h1 class="form-header text-center uppercase">Contact Us</h1>
-    <form action="https://formspree.io/f/xjkbveaz" method="POST" id="contactForm">
-        {% csrf_token %}
-        <div class="mb-3">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-md-6 display-form" id="contact-header">
+            <h1 class="form-header text-center uppercase">Contact Us</h1>
+            <form action="https://formspree.io/f/xjkbveaz" method="POST" id="contactForm">
+                {% csrf_token %}
+                <div class="mb-3 text-center justify-content-center form-input">
+                    <label for="name" class="form-label">Name:</label>
+                    <input type="text" id="name" name="name"  placeholder="Full Name" required>
+                </div>
+                <div class="mb-3 text-center justify-content-center form-input">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" id="email" name="email"  placeholder="Email Address" required>
+                </div>
+                <div class="mb-3 text-center justify-content-center form-input">
+                    <label for="phone" class="form-label">Phone:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+                </div>
+                <div class="mb-3 text-center justify-content-center form-input">
+                    <label for="message" class="form-label">Message:</label>
+                    <textarea id="message" name="message" rows="4"  placeholder="Describe your query here." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-light d-block mx-auto">Send</button>
+            </form>
         </div>
-        <div class="mb-3">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        <div class="mb-3">
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone">
-        </div>
-        <div class="mb-3">
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Send</button>
-    </form>
+    </div>
 
    <!-- Thank you message and button -->
-   <div id="thankYouMessage" style="display: none;">
-    <h2>Thank You!</h2>
-    <p>Your message has been sent successfully!</p>
-    <button id="returnHomeButton" class="btn btn-primary">Return to Home</button>
-</div>
+    <div id="thankYouMessage" style="display: none;">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-md-6 display-form">
+                    <h2 class="form-header text-center uppercase">Thank You!</h2>
+                    <p class="text-center">Your message has been sent successfully!</p>
+                    <button id="returnHomeButton" class="btn btn-light d-block mx-auto">Return to Home</button>
+                </div>
+            </div>  
+        </div>
+    </div>
 
 </div>
 
