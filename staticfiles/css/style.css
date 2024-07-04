@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+.navbar {
+    background-color: rgb(38, 105, 72);
+}
+
+/*  Colours  */
+
+body {
+    height: 100vh;
+    background-image: url(../images/cpi-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#home {
+    padding: 25px;
+    background-color: rgba(38, 105, 72, 0.8);
+    color: whitesmoke;
+}
+
+/*  Paddings, margins and text styles  */
+
+h1,
+h2 {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+}
+
+.section-heading {
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.btn {
+    font-family: "Quicksand", sans-serif;
+}
+
+/*  What we do section  */
+
+.what-do-icon {
+    font-size: 26px;
+    color: whitesmoke;
+}
+
+.what-do-heading {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/*  Footer  */
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(38, 105, 72);
+    min-height: 60px;
+    margin: 0;
+}
+
+.footer-links {
+    width: 32px;
+    height: 32px;
+    padding: 12px 0;
+    border-radius: 50%;
+    font-size: 20px;
+    line-height: 7px;
+    text-align: center;
+    color: #fafafa;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+/*  Booking, edit and delete forms and party list  */
+
+.display-form {
+    background-color: rgba(38, 105, 72, 0.8);
+    color: whitesmoke;
+    padding: 15px;
+}
+
+.form-header {
+    font-weight: 400;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    padding-top: 10px;
+    margin: 0 auto;
+    max-width: 70%;
+}
+
+.cancel-btn {
+    margin-top: 5px;
+}
+
+/*  Contact form  */
+.form-input {
+    display: flex;
+    align-items: center;
+}
+.form-label {
+    padding-right: 5px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+}
+
+/*  Login page  */
+.link-color {
+    background-color: whitesmoke;
+    color: rgb(38, 105, 72);
+}
