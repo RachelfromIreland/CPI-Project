@@ -128,6 +128,7 @@ The footer contains social media links that open in a new tab.
 
 ### Admin
 - The django admin page allows the superuser to view, edit and delete all bookings.
+- An admin login will be provided on submission for assessors.
 
 
 
