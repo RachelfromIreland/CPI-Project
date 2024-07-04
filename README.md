@@ -161,9 +161,13 @@ The footer contains social media links that open in a new tab.
 
 ## Concept
 ### Flowchart
-The original idea for the project can be seen in the basic flowchart below.  Specific functions and more detailed processes were added while writing the code.
+The original idea for the project can be seen in the basic flowchart below. 
 
 # Flowchart screenshot
+
+From there a wireframe was created to help visualise the project.
+
+# Wireframe screenshot
 
 ### Design
 As CPI has a park and nature area on site green was chosen as the main site color.  Bootstrap was used to add color to button elements.
@@ -179,16 +183,13 @@ As CPI has a park and nature area on site green was chosen as the main site colo
 #### Testing User Stories: First Time Visitors
 | User Goal | How It Is Achieved |
 | ---| ---|
-| As a First Time User, I want the program to be easy to read and intuitive to navigate to ensure a pleasant user experience. | Colorama styles break up the text in the console and the prompts are descriptive and easy to understand. |
-| As a First Time User, I want to easily create an account. | The user is walked through creating an account step by step with prompts, and error messages in red tell them when they need to edit their response. |
-| As a First Time User, I want to be able to borrow a book. | After creating an account the user is prompted to search titles from the library and can check out any available ones. |
-
-
-#### Testing User Stories: Returning Visitors
-| User Goal | How It Is Achieved |
-| ---| ---|
-| As a Returning User, I want to be able to log in to my previously made account. | If a user states that they have used the program before they will be prompted to log in using their existing username and password. |
-| As a Returning User, I want to see if a book I've had my eye on for a while which was previously unavailable is available to borrow. | The return date for the books is updated automatically on starting the program, any dates which have passed are removed and availability is set to 'Yes'. |
+| Book a party | After logging in, clicking on the Book A Party navbar item or on the button on the homepage allows the user to access the form to book a party.  This form adds a new item to the database which can be viewed by the user who added it or by admin.  Testing involved creating the basic form and using devtools to look for any errors. |
+| View information about the facility | The user can view information about the facility on the homepage.  The format was tested by first adding a basic skeleton structure and styles before adding the content. |
+| Change or delete bookings as a user  | Once logged in and viewing the My Bookings page, the user can edit and delete their bookings. This was tested by creating multiple bookings for a single user and then editing and deleting them.  Styles were added later and functionality was tested throughout this process. |
+| Enquire about services other than parties | The user can fill out a form which will send an email to the staff email created for the project.  This was tested throughout by submitting the form multiple times with different messages to denote different tests, and checking the console in devtools for any errors.  It was tested throughout the development and styling process to ensure no changes impacted functionality. |
+| View bookings as staff | A staff login was created by adding a superuser with django.  The superuser was then tested by creating some regular users and adding multiple bookings to ensure the superuser could see all bookings in the /admin page. |
+| Edit and delete bookings as admin | The superuser can also edit and delete bookings, and this was tested by creating multiple bookings by multiple users and having the superuser edit and delete some of these bookings. |
+| View Bookings as a user | Once logged in the user can view their bookings by clicking My Bookings in the navbar, or by being redirected after a booking.  This was tested throghout by creating multiple users to ensure they could only see bookings they had created, and styles to make the list more user friendly were added later. |
 
 
 #### Full Testing
@@ -209,16 +210,15 @@ Full Testing was performed on the following physical devices.
 #### Solved Bugs
 | Bug | Solution |
 | ---| ---|
-| All books in the spreadsheet were flagged as unavailable whether availability was 'no' or not. | Solution: Used .value() to return the cell value to be able to compare it to the string used in the function. |
-| The program crashed when trying to update the books spreadsheet and when running the function to update the return dates. | Used .strptime() to ensure the date format in the code matched the date format of the spreadsheet. Checked the cell format on the spreadsheet when the error persisted and ensured the entire column was formatted the same way. |
-| Running the update returns function just resulted in an error on the console. | After running some more tests and Googling the error messages, the empty cells in the column were found to be preventing the function from working.  Adding an extra if statement to only have the function look for cells with dates resolved the issue. |
+|  |  |
+|  |  |
+|  |  |
 
 #### Unsolved Bugs
 No unsolved bugs were detected after testing.
 
 ### Validator Testing
-- The program was tested using [PEP8](https://pep8ci.herokuapp.com/). No errors were found.
-- A screenshot of the results can be found [here](/documents/PEP8_validation.png).
+# Update validator testing here
 
 
 ## Technologies Used
