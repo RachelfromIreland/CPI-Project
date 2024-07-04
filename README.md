@@ -150,10 +150,6 @@ The footer contains social media links that open in a new tab.
     - The login information for this email will be provided on submission to allow assessors to test functionality.
 
 
-### Future Features
-- Allow staff members to pull user emails and send out information on upcoming community events. 
-
-
 ## Concept
 ### Flowchart
 The original idea for the project can be seen in the basic flowchart below. 
@@ -180,7 +176,13 @@ As CPI has a park and nature area on site green was chosen as the main site colo
 - GitHub was used to host the code of the project.
 - Django was used to build the project.
 - Heroku was used to deploy the project.
-- Bootstrap was used along with CSS to style the project
+- Bootstrap was used along with CSS to style the project.
+- Whitenoise was used to handle static files.
+- Gunicorn was used as a server for python.
+
+### External Tools Used
+- [Lucid Chart](https://www.lucidchart.com/pages/examples/flowchart-maker) was used to create the flowchart.
+- [Formspree](https://formspree.io/) was used for the contact form.
 
 ## Deployment
 This project was deployed using Heroku.
@@ -207,9 +209,6 @@ git clone https://github.com/RachelfromIreland/CPI-Project
 - CI Django Blog and My Resume - LINK HERE
 - The background image for the project was taken from [castlefinn.ie](https://castlefinn.ie/points-of-interest/cpi-centre/).
 
-## Tools
-- [Lucid Chart](https://www.lucidchart.com/pages/examples/flowchart-maker) was used to create the flowchart.
-- [Formspree](https://formspree.io/) was used for the contact form.
 
 ## Acknowledgments
 - This project was completed with the guidance of my mentor, Rory Patrick Sheridan.  His feedback was invaluable and his guidance made completing this project a very educational experience.
