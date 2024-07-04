@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+import environ
 import dj_database_url
 if os.path.isfile('env.py'):
     import env
@@ -55,6 +56,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
     'book',
     'home',
+    'contact',
 ]
 
 SITE_ID = 1
