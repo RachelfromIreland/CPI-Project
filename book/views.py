@@ -5,7 +5,9 @@ from django.contrib import messages
 from .models import Booking
 from .forms import BookingForm
 
+
 # Create your views here.
+# Party booking
 @login_required
 def book_party(request):
     if request.method == 'POST':
@@ -24,11 +26,14 @@ def book_party(request):
     return render(request, 'book/book_party.html', {'form': form})
 
 
+# Party list
 @login_required
 def party_list(request):
     bookings = Booking.objects.filter(customer=request.user)
     return render(request, 'book/party_list.html', {'bookings': bookings})
 
+
+# Edit booking
 @login_required
 def edit_booking(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id, customer=request.user)
@@ -42,13 +47,14 @@ def edit_booking(request, booking_id):
     return render(request, 'book/edit_booking.html', {'form': form, 'booking': booking})
 
 
+# Delete booking
 @login_required
 def delete_booking(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id, customer=request.user)
-    
+
     if request.method == 'POST':
         booking.delete()
         messages.success(request, 'Booking deleted successfully!')
         return redirect('book:party_list')
-    
+
     return render(request, 'book/delete_booking.html', {'booking': booking})
