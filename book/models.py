@@ -9,6 +9,7 @@ TIME_SLOTS = [
     ('14:00', '2:00 PM - 4:00 PM'),
 ]
 
+
 class Booking(models.Model):
     customer = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
     booking_name = models.CharField(max_length=100)
