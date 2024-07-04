@@ -36,7 +36,9 @@ Full Testing was performed on the following physical devices.
 | The styles added with CSS were not loading | The STATIC_URL and STATIC_FILES_DIRS had not been added to settings.py correctly.  Fixing this error solved the issue. |
 
 ### Unsolved Bugs
-No unsolved bugs were detected after testing.
+| Bug | Explanation |
+| ---| ---|
+| User can book parties in the past | While testing it was discovered that the user can book parties in the past.  This will be corrected for future deployments if the site is to be used as the company website.  Due to time constraints it was not fixed before project submission. |
 
 ## Validator Testing
 # Update validator testing here
