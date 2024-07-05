@@ -128,6 +128,7 @@ In production the site has been tested on the following browsers:
 - CSS
     - No errors were found when passing through the official [(Jigsaw)](https://jigsaw.w3.org/css-validator/) validator.
     - An image of the result can be found [here](/documents/images/validator_screenshots/css-valid.JPG).
+    
 - JavaScript
     - No errors were found when passing through the official [Jshint](https://jshint.com/) validator
     - An image of the result can be found [here](/documents/images/validator_screenshots/js-valid.JPG).
@@ -136,16 +137,14 @@ In production the site has been tested on the following browsers:
 
 | HTML Files | Validation Passed? |
 | ---| ---|
-| book/book_party.html |  |
-| book/delete_booking.html |  |
-| book/edit_booking.html |  |
-| book/party_list.html |  |
-| contact/contact.html |  |
-| home/home.html |  |
-| account/login.html |  |
-| account/logout.html |  |
-| account/signup.html |  |
-| base.html |  |
+| book/book_party.html | [Yes](/documents/images/validator_screenshots/html_validation/booking-form-valid.JPG) |
+| book/delete_booking.html | [Yes](/documents/images/validator_screenshots/html_validation/delete-book-valid.JPG) |
+| book/edit_booking.html | [Yes](/documents/images/validator_screenshots/html_validation/edit-book-valid.JPG) |
+| book/party_list.html | [Yes](/documents/images/validator_screenshots/html_validation/party-list-valid.JPG) |
+| contact/contact.html | [Yes](/documents/images/validator_screenshots/html_validation/contact-us-valid.JPG) |
+| home/index.html | [Yes](/documents/images/validator_screenshots/html_validation/home-index-valid.JPG) |
+
+
 
 - Python files were tested using [PEP8](https://pep8ci.herokuapp.com/).  Only files created and modified were validated.  Results are below with links to screenshots.
 
@@ -154,7 +153,7 @@ In production the site has been tested on the following browsers:
 | book/forms.py | [Yes](/documents/images/validator_screenshots/python_validation/book-forms-valid.JPG) |
 | book/models.py | [Yes](/documents/images/validator_screenshots/python_validation/book-models-valid.JPG) |
 | book/urls.py | [Yes](/documents/images/validator_screenshots/python_validation/book-urls-valid.JPG) |
-| book/views.py |  |
+| book/views.py | [Yes](/documents/images/validator_screenshots/python_validation/book-views-valid.JPG) |
 | contact/forms.py | [Yes](/documents/images/validator_screenshots/python_validation/contact-form-valid.JPG) |
 | contact/urls.py | [Yes](/documents/images/validator_screenshots/python_validation/contact-urls-valid.JPG) |
 | contact/views.py | [Yes](/documents/images/validator_screenshots/python_validation/contact-views-valid.JPG) |
