@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contactForm');
     const thankYouMessage = document.getElementById('thankYouMessage');
     const returnHomeButton = document.getElementById('returnHomeButton');
-    const contactHeader = document.getElementById('contactHeader');
+    const contactHeader = document.getElementById('contact-header');
 
     if (form && thankYouMessage && returnHomeButton) {
         // Add event listener for form submission
