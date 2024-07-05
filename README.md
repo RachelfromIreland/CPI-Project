@@ -59,7 +59,7 @@ On Mobile Devices the navigation bar is hidden and is toggled by a button on the
 
 When the palette menu is clicked, there is a dropdown menu with the links in the same order. 
 
-![Navbat expanded mobile screenshot](/documents/images/nav-mobi-full.JPG)
+![Navbar expanded mobile screenshot](/documents/images/nav-mobi-full.JPG)
 
 ### Home Page
 #### Contents:
@@ -85,7 +85,7 @@ On the page is a form that contains:
 ### Contact Us Section
 - The Contact Us Section contains a heading followed by the contact form.
 - The form contains fields for name, email, phone and message.
-- The form is powered by ![Formspree](https://formspree.io/) and submitting the form sends the information to an email created for the project, cpiprojecttest@gmail.com.  More information on this can be found below.
+- The form is powered by [Formspree](https://formspree.io/) and submitting the form sends the information to an email created for the project, cpiprojecttest@gmail.com.  More information on this can be found below.
 
 ![Contact Us](/documents/images/contact.JPG)
 
@@ -94,7 +94,7 @@ On the page is a form that contains:
 - It contains a thank you message for the user.
 - There is a button below the message which brings the user back to the home page.
 
-# Thank you screenshot
+![Thank you screenshot](/documents/images/contact-thank-you.JPG)
 
 ### My Bookings Section
 - The My Bookings section has a welcome message for the user at the top.
@@ -144,7 +144,7 @@ The footer contains social media links that open in a new tab.
     - If the party time slot is available the user will have the option to book it.
     - If a time slot is unavailable the user will be informed and asked to choose a different slot.
     - If a user wants to edit or delete bookings, they will have the option to cancel the changes.
-- The contact form is powered by ![Formspree](https://formspree.io/).
+- The contact form is powered by [Formspree](https://formspree.io/).
     - First, the user completes the form:
     ![A screenshot of the filled in contact form](/documents/images/email-test-form.JPG)
 
