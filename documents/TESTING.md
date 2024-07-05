@@ -109,6 +109,10 @@ In production the site has been tested on the following browsers:
 - The message asking if a user wants to log out is loading correctly.
 - Clicking the button on the message redirects to the home page correctly.
 
+### Admin
+- Adding /admin to the URL brings the user to the Django admin page.
+- When logged in as the superuser within the admin page the user has the ability to view, edit and delete all bookings, regardless of creator.
+
 
 ## Bugs
 ### Solved Bugs
@@ -128,7 +132,7 @@ In production the site has been tested on the following browsers:
 - CSS
     - No errors were found when passing through the official [(Jigsaw)](https://jigsaw.w3.org/css-validator/) validator.
     - An image of the result can be found [here](/documents/images/validator_screenshots/css-valid.JPG).
-    
+
 - JavaScript
     - No errors were found when passing through the official [Jshint](https://jshint.com/) validator
     - An image of the result can be found [here](/documents/images/validator_screenshots/js-valid.JPG).
