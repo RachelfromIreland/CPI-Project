@@ -194,7 +194,6 @@ From there a wireframe was created to help visualise the project.
 As CPI has a park and nature area on site green was chosen as the main site color.  Bootstrap was used to add color to button elements.
 - Delete buttons appear in red to make them more noticeable to the user.
 - Other buttons are light to tie in with the white text throughout the site.
-- Important notes to the user appear in yellow, for example noting that book titles must appear as they do on the book.
 - All pages use a background image of the exterior of the CPI complex.  As a community center, this was done to add familiarity to the user, and so that new users would recognise the building on arrival.
 
 ## Testing
