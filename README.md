@@ -14,7 +14,7 @@ The site can be accessed by this [link](https://cpi-ltd-project-38c4fa95377b.her
     * [Existing Features](#existing-features)
     * [Future Features](#future-features)
 * [Concept](#concept)
-    * [Flow Chart](#flow-chart)
+    * [Design](#design)
     * [Colors](#colors)
 * [Testing](#testing)
     * [Manual Testing](#manual-testing)
@@ -36,7 +36,8 @@ The site can be accessed by this [link](https://cpi-ltd-project-38c4fa95377b.her
 
 ### Navbar
 
-# Navbar screenshot here
+![Navbar Screenshot](/documents/images/navbar-screenshot.JPG)
+
 - Positioned at the top of the page.
 - Contains the name of the centre on the left side.
 - Contains navigation links:
@@ -54,11 +55,11 @@ The navigation bar is responsive:
 
 On Mobile Devices the navigation bar is hidden and is toggled by a button on the right-hand side.
 
-# Movile navbar screenshot here 
+![Mobile navbar screenshot](/documents/images/nav-mobi.JPG) 
 
 When the palette menu is clicked, there is a dropdown menu with the links in the same order. 
 
-# Mobile expanded nav screenshot here
+![Navbat expanded mobile screenshot](/documents/images/nav-mobi-full.JPG)
 
 ### Home Page
 #### Contents:
@@ -69,7 +70,7 @@ When the palette menu is clicked, there is a dropdown menu with the links in the
 - Has link to party booking form.
 - Has link to contact form.
  
-# Home page screenshot here
+![Homepage](/documents/images/homepage.JPG)
 
 ### Book A Party Section
 The Book A Party section has a fixed background image of the centre for consistency.
@@ -79,14 +80,14 @@ On the page is a form that contains:
 - The timeslots correspond to the two party slots per day the centre offers.
 - A button that leads the user to a list of their bookings, also found under 'My Bookings' from the navbar.
 
-# Booking screenshot here
+![Book A Party](/documents/images/book-party.JPG)
 
 ### Contact Us Section
 - The Contact Us Section contains a heading followed by the contact form.
 - The form contains fields for name, email, phone and message.
 - The form is powered by ![Formspree](https://formspree.io/) and submitting the form sends the information to an email created for the project, cpiprojecttest@gmail.com.  More information on this can be found below.
 
-# Contact screenshot here
+![Contact Us](/documents/images/contact.JPG)
 
 ### Thank You Message
 - The Thank You message appears after submitting the contact form.
@@ -101,35 +102,37 @@ On the page is a form that contains:
 - Each listing has both an edit and a delete button.
 - The edit and delete buttons allow the user to change or cancel their booking.
 
-# My bookings screenshot here
+![My Bookings](/documents/images/booking-list.JPG)
 
 ### Register Section
 - The Register Section has a form a new user can fill in to create an account.
 - It contains fields for username and password as well as an optional email field.
 - It is only visible to users who have not logged in.
 
-
-# Register Screenshot here
+![Register Screen](/documents/images/register.JPG)
 
 ### Login Section
 - The Login Section allows a registered user to log in.
 - It is only visible to users who have not logged in.
 
-# Login Screenshot here
+![Login Screen](/documents/images/login.JPG)
 
 ### Logout Section
 - The Logout Section allows users to log out.
 - It asks the user to confirm before logging out.
 
-# Log out Screenshot here
+![Logout Screen](/documents/images/logout.JPG)
 
 ### Footer
 The footer contains social media links that open in a new tab.  
+
+![Footer](/documents/images/footer.JPG)
 
 ### Admin
 - The django admin page allows the superuser to view, edit and delete all bookings.
 - An admin login will be provided on submission for assessors.
 
+![Admin Panel](/documents/images/admin-panel.JPG)
 
 
 ## Features
@@ -142,23 +145,45 @@ The footer contains social media links that open in a new tab.
     - If a time slot is unavailable the user will be informed and asked to choose a different slot.
     - If a user wants to edit or delete bookings, they will have the option to cancel the changes.
 - The contact form is powered by ![Formspree](https://formspree.io/).
-    - Forms are sent using this format:
+    - First, the user completes the form:
+    ![A screenshot of the filled in contact form](/documents/images/email-test-form.JPG)
 
-    # Email format example
+    - Then, a thank you message appears so the user knows their message was sent.
 
-    - The forms are sent to a staff gmail account created for this project, cpitestproject@gmail.com.
-    - The login information for this email will be provided on submission to allow assessors to test functionality.
+    - Through Formspree, forms are sent to a staff gmail account created for this project, cpitestproject@gmail.com.
+  
+
+### Database Structure
+
+Code Institute's [database site](https://dbs.ci-dbs.net/) was used to create the database for the project.
+
+![A diagram of the database structure for the project](/documents/images/database.JPG)
+
+#### Explanation
+
+##### User Table
+- Contains the basic fields for the user.  In this case they're id, username, email and password.  This model is provided by Django auth.
+
+##### Booking Table
+- The model for this table is found in [the book app.](/book/models.py) 
+- It contains fields specific to a booking which are as id, customer_id, booking_name, num_attending, date, time_slot, and booking_date.
+- customer_id is a foreign key to the id in the User Table.
+
+##### Relationships
+
+- There is a one-to-many relationship between User and Booking because a user can have multiple bookings.
+- The unique_together rule makes sure that no two bookings can have the same date and time_slot.  This ensures there will be no double bookings.
 
 
 ## Concept
 ### Flowchart
 The original idea for the project can be seen in the basic flowchart below. 
 
-# Flowchart screenshot
+![A flowchart showing the idea for the project](/documents/images/flowchart.JPG)
 
 From there a wireframe was created to help visualise the project.
 
-# Wireframe screenshot
+![The wireframe diagram used to plan the project](/documents/images/wireframe.JPG)
 
 ### Design
 As CPI has a park and nature area on site green was chosen as the main site color.  Bootstrap was used to add color to button elements.
@@ -183,15 +208,18 @@ As CPI has a park and nature area on site green was chosen as the main site colo
 ### External Tools Used
 - [Lucid Chart](https://www.lucidchart.com/pages/examples/flowchart-maker) was used to create the flowchart.
 - [Formspree](https://formspree.io/) was used for the contact form.
+- Code Institute's [database site](https://dbs.ci-dbs.net/) was used to create the database for the project.
 
 ## Deployment
 This project was deployed using Heroku.
 
 The steps to deploy are as follows:
-- Fork or clone this repository.
-- Create a new Heroku app.
-- Link the repository to the Heroku app.
-- Click the deploy button. 
+- Fork or clone this repository.  The repository can be found [here](https://github.com/RachelfromIreland/CPI-Project).
+- Log into your [Heroku](https://www.heroku.com) account, or create one if you haven't already.
+- Navigate to 'New' in the upper right corner.
+- Click create new app.  Give your app a unique name and choose the region closest to where you are.
+- Link the repository to the Heroku app by pasting the [GitHub Repository link](https://github.com/RachelfromIreland/CPI-Project) into the Deploy tab.
+- Click the deploy button under Manual Deployment. 
 
 The live link can be found [here](https://cpi-ltd-project-38c4fa95377b.herokuapp.com/).
 
@@ -206,10 +234,11 @@ git clone https://github.com/RachelfromIreland/CPI-Project
 - For future projects, I would like to improve my commit messages.  I was very focused throughout the project and would often write a file and change it until it worked and then commit it.  This resulted fewer commit messages, which I think can be improved on next time.
 
 ## Credit
-- CI Django Blog and My Resume - LINK HERE
+- Code Institute's [Django Blog](https://github.com/Code-Institute-Solutions/blog/tree/main) and [My Resume](https://github.com/Code-Institute-Solutions/resume-miniproject-bootstrap4/tree/master) walkthrough projects were invaluable in learning the skills needed for this project.  And the home page in particular was inspired by the layout of the Resume project.
 - The background image for the project was taken from [castlefinn.ie](https://castlefinn.ie/points-of-interest/cpi-centre/).
 
 
 ## Acknowledgments
 - This project was completed with the guidance of my mentor, Rory Patrick Sheridan.  His feedback was invaluable and his guidance made completing this project a very educational experience.
-- User testing was completed by my fiancé, Caolán Curran and mother, Sylvia McGlinchey - administrator at the real CPI Ltd.  His feedback enabled me to improve the site and create a more pleasant user experience.
+- User testing was completed by my fiancé, Caolán Curran.  His feedback enabled me to improve the site and create a more pleasant user experience. 
+- The project was inspired by a conversation with my mother, Sylvia McGlinchey, the administrator at the real CPI Ltd.  
