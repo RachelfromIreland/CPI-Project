@@ -146,12 +146,15 @@ The footer contains social media links that open in a new tab.
     - If a user wants to edit or delete bookings, they will have the option to cancel the changes.
 - The contact form is powered by [Formspree](https://formspree.io/).
     - First, the user completes the form:
+
     ![A screenshot of the filled in contact form](/documents/images/email-test-form.JPG)
 
     - Then, a thank you message appears so the user knows their message was sent.
+
     ![A screenshot of the thank you message](/documents/images/contact-thank-you.JPG)
 
     - Through Formspree, forms are sent to a staff gmail account created for this project, cpitestproject@gmail.com.
+    
     ![Screenshot of the email received](/documents/images/contact-email-result.JPG)
   
 
