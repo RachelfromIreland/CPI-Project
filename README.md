@@ -154,7 +154,7 @@ The footer contains social media links that open in a new tab.
     ![A screenshot of the thank you message](/documents/images/contact-thank-you.JPG)
 
     - Through Formspree, forms are sent to a staff gmail account created for this project, cpitestproject@gmail.com.
-    
+
     ![Screenshot of the email received](/documents/images/contact-email-result.JPG)
   
 
@@ -171,7 +171,7 @@ Code Institute's [database site](https://dbs.ci-dbs.net/) was used to create the
 
 ##### Booking Table
 - The model for this table is found in [the book app.](/book/models.py) 
-- It contains fields specific to a booking which are as id, customer_id, booking_name, num_attending, date, time_slot, and booking_date.
+- It contains fields specific to a booking which are id, customer_id, booking_name, num_attending, date, time_slot, and booking_date.
 - customer_id is a foreign key to the id in the User Table.
 
 ##### Relationships
